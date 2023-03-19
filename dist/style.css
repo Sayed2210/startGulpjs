@@ -4,6 +4,11 @@
   }
 }
 
+.felx {
+  display: flex;
+  justify-content: center;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -281,7 +286,7 @@ a {
   margin-bottom: 10px;
 }
 .our-players-content .player-box h4 span {
-  font-weight: bold;
+  font-weight: normal;
 }
 .our-players-content .player-box p {
   color: #9c9c9c;

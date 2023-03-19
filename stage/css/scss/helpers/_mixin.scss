@@ -75,3 +75,7 @@
 @mixin smooth {
     transition: 0.3s;
 }
+//border
+@mixin border-1 {
+    border: 1px solid #ccc;
+}
