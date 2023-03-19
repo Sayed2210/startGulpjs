@@ -1,0 +1,99 @@
+.header {
+    padding: 20px 0;
+    border-bottom: 1.5px solid $geryColor;
+    .container {
+        @include flex-between;
+        .logo {
+            flex: 1;
+            h1 {
+                font-weight: bold;
+                margin-bottom: 10px
+            }
+        }
+        .navbar {
+            @include flex;
+            align-items: center;
+            background-color: $redColor;
+            flex: 2;
+            @include perfixer(border-radius,16px,webkit);
+            li {
+                text-align: center;
+                width: 20%;
+                a {
+                    color: #fff;
+                    display: block;
+                    padding: 15px;
+                    opacity: 0.8;
+                    &:hover {
+                        opacity: 1;
+                    }
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .menu-bar,
+            .menu-btn,
+            .dis-menu {
+                display: none;
+        }
+        @include smScreen {
+            .navbar {
+                display: none;
+            }
+            .menu-btn {
+                display: block;
+                color: #000;
+                font-size: 1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                width: 40px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                border-radius: 50%;
+                border: 2px solid #000;
+                position: relative;
+            }
+            .dis-menu:checked +.menu-bar {
+                display: flex;
+                top: 105px;        
+            }
+            .menu-bar {
+                display: none;
+                background-color: #000;
+                flex-direction: column;
+                width: 90%;
+                justify-content: center;
+                text-align: center;
+                -o-transition: 0.3s;
+                -webkit-transition: 0.3s;
+                -moz-transition: 0.3s;
+                -ms-transition: 0.3s;
+                transition: 0.3s;
+                position: absolute;
+                right: 10px;
+                top: 100px;
+                z-index: 1000000000000000;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    border: 20px solid transparent;
+                    top: -40px;
+                    border-bottom-color: #000;
+                    right: 6px;
+                }
+            }
+            .menu-bar a {
+            padding: 25px;
+            font-family: satisfy;
+            color: #fff;
+            text-decoration: none;
+            }
+        }
+    }
+}

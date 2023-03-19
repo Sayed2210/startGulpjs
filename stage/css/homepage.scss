@@ -1,0 +1,20 @@
+//import vaiables
+@import 'scss/helpers/variables';
+//import mixins
+@import 'scss/helpers/mixin';
+@import 'scss/helpers/helper-classes';
+//import functions
+@import 'scss/helpers/functions';
+//import grid system
+@import 'scss/layout/grid';
+//import components
+@import 'scss/components/headings';
+@import 'scss/components/buttons';
+//import global page
+@import 'scss/pages/globalpage';
+//import header
+@import 'scss/layout/header';
+//import page
+@import 'scss/pages/homepage';
+//import footer
+@import 'scss/layout/footer';

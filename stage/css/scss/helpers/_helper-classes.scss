@@ -1,0 +1,5 @@
+.txt-align-c-sm {
+    @include smScreen {
+        text-align: center !important;
+    }
+}

@@ -1,0 +1,22 @@
+.main-title-b {
+    position: relative;
+    h2 {
+    max-width: 350px;
+    background-color: $redColor;
+    margin: 40px auto;
+    text-align: center;
+    border-radius: 16px;
+    color: #fff;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1.5px;
+        background-color: $geryColor;
+        left: 0;
+        top: 50%;
+        z-index: -1;
+    }
+    }
+    
+}

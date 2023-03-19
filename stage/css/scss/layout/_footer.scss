@@ -1,0 +1,111 @@
+.footer {
+    background-color: #ccc;
+    padding-top: 50px;
+    .container {
+        @include flex;
+        gap: 10px;
+        align-items: flex-start;
+        border-bottom: 1.5px solid $geryColor;
+        @include smScreen {
+            flex-direction: column;
+            gap: 20px;
+        }
+        .main-title {
+            margin-bottom: 10px;
+        }
+        .gallery {
+            .img-box {
+                @include flex;
+                gap: 10px;
+                margin-bottom: 25px;
+                padding: 10px 0;
+                @include smScreen {
+                    flex-direction: column;
+                    gap: 20px;
+                    text-align: center;
+                    align-items: center;
+                    padding: 0;
+                }
+                img {
+                    width: 105px;
+                    padding: 5px;
+                    background-color: #fff;
+                    border: 1px solid #000;
+                    @include smScreen {
+                        width: 250px;
+                    }
+                }
+                .info {
+                    padding: 5px;
+                    h3 {
+                        color: $redColor;
+                    }
+                    p {
+                        color: $geryColor;
+                    }
+                    @include smScreen {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        .details {
+            width: 100%;
+            ul {
+                color: $geryColor;
+                margin-bottom: 15px;
+                li {
+                    span {
+                        color: $redColor;
+                    }
+                }
+            }
+            p {
+                color: $geryColor;
+            }
+        }
+        .contact {
+            width: 100%;
+            form {
+                input {
+                    width: 100%;
+                    padding: 10px 15px;
+                    margin-bottom: 15px;
+                    border: none;
+                    border-radius: 6px;
+                    &:focus {
+                        outline-color: $geryColor;
+                    }
+                    &:focus::placeholder{
+                        opacity: 0;
+                    }
+                }
+                textarea {
+                    width: 100%;
+                    height: 150px;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 6px;
+                    &:focus {
+                        outline-color: $geryColor;
+                    }
+                    &:focus::placeholder{
+                        opacity: 0;
+                    }
+                }
+                ::placeholder {
+                    @include smooth;
+                }
+            }
+        }
+        .info {
+            padding: 15px 0;
+            span {
+                margin-left: 300px;
+                @include smScreen {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
